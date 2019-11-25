@@ -11,12 +11,25 @@ const CardWrapper = styled.div`
     border: 2px solid grey;
     border-radius: 5px;
     margin: 2% 0;
+    width: 45%;
+    display: flex;
+    /* not sure why this or 'CardContainer' wont flex side by side */
 
     &:hover {
         background: salmon;
         color: white;
     }
 `
+
+const CardContainer = styled.div`
+    border: 2px solid red;
+    width: 100%;
+`
+
+const ImageWrapper = styled.img`
+    width: 30%;
+`
+
 
 const CharacterCard = (props) => {
 
@@ -26,14 +39,16 @@ const CharacterCard = (props) => {
         <div>
             <LinkStyle to={`/Character/${props.character.char_id}`} >
                 <CardWrapper>
-                    <p>ID: {char_id}</p>
-                    <img src={img} alt='breaking bad characters' />
-                    <p>Name: {name}</p>
-                    <p>Nickname: {nickname}</p>
-                    <p>Birthday: {birthday}</p>
-                    <p>Occupation: {occupation}</p>
-                    <p>Portrayed by: {portrayed}</p>
-                    <p>Status: {status}</p>
+                    <CardContainer>
+                        <p>ID: {char_id}</p>
+                        <ImageWrapper src={img} alt='breaking bad characters' />
+                        <p>Name: {name}</p>
+                        <p>Nickname: {nickname}</p>
+                        <p>Birthday: {birthday}</p>
+                        <p>Occupation: {occupation}</p>
+                        <p>Portrayed by: {portrayed}</p>
+                        <p>Status: {status}</p>
+                    </CardContainer>
                 </CardWrapper>
             </LinkStyle>
         </div>

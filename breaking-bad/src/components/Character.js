@@ -4,7 +4,7 @@ import axios from 'axios';
 const Character = (props) => {
     console.log(props)
     //set up initial state using useState
-    const [character, setCharacter] = useState({});
+    const [character, setCharacter] = useState([]);
     console.log(character)
     //setup id --> dynamic ID;
     const id = props.match.params.id;

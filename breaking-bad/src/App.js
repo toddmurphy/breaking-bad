@@ -5,6 +5,7 @@ import Navigation from './components/Navigation';
 import Home from './components/Home';
 import { Route } from 'react-router-dom';
 import './App.css';
+import CharacterCard from './components/CharacterCard';
 
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
       <Navigation />
       <Route exact path='/Home' component={Home} />
       <Route exact path='/CharacterList' component={CharacterList} />
-      <Route exact path='/Character' component={Character} />
+      {/* <Route exact path='/Character/:id' component={Character} /> */}
+      <Route exact path='/Character/:id' render={props => <Character {...props} />} />
     </div>
   );
 }

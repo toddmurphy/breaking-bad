@@ -11,21 +11,27 @@ const CardWrapper = styled.div`
     border: 2px solid grey;
     border-radius: 5px;
     margin: 2% 0;
-`
 
+    &:hover {
+        background: salmon;
+        color: white;
+    }
+`
 
 const CharacterCard = (props) => {
 
     //destructure out 'props/keys' from 'character'
-    const { char_id, name, nickname, occupation, portrayed, status } = props.character;
+    const { char_id, img, name, birthday, nickname, occupation, portrayed, status } = props.character;
     return (
         <div>
-            <LinkStyle to={'/Character/:id'} >
+            <LinkStyle to={`/Character/${props.character.char_id}`} >
                 <CardWrapper>
                     <p>ID: {char_id}</p>
+                    <img src={img} alt='breaking bad characters' />
                     <p>Name: {name}</p>
                     <p>Nickname: {nickname}</p>
-                    <p>Occupation: {occupation[0]}</p>
+                    <p>Birthday: {birthday}</p>
+                    <p>Occupation: {occupation}</p>
                     <p>Portrayed by: {portrayed}</p>
                     <p>Status: {status}</p>
                 </CardWrapper>

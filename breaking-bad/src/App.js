@@ -5,7 +5,6 @@ import Navigation from './components/Navigation';
 import Home from './components/Home';
 import { Route } from 'react-router-dom';
 import './App.css';
-import CharacterCard from './components/CharacterCard';
 
 
 function App() {

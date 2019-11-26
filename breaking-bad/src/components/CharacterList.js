@@ -3,6 +3,7 @@ import SearchForm from './SearchForm';
 
 
 
+
 const CharacterList = () => {
     return (
         <div>

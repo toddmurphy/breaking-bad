@@ -10,33 +10,38 @@ const LinkStyle = styled(Link)`
 const CardWrapper = styled.div`
     border: 2px solid grey;
     border-radius: 5px;
-    margin: 2% 0;
-    width: 45%;
-    display: flex;
-    /* not sure why this or 'CardContainer' wont flex side by side */
-
+    width: 70%;
+    margin: auto;
+    /* margin: 2% 0; */
+    margin-top: 5%;
+    
     &:hover {
         background: salmon;
         color: white;
+        border: 2px solid salmon;
     }
 `
 
 const CardContainer = styled.div`
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 100%;
+    margin: 3% 0;
 `
 
 const ImageWrapper = styled.img`
     width: 30%;
 `
+const FlexWrapper = styled.div`
+    margin: auto;
 
+`
 
 const CharacterCard = (props) => {
 
     //destructure out 'props/keys' from 'character'
     const { char_id, img, name, birthday, nickname, occupation, portrayed, status } = props.character;
     return (
-        <div>
+        <FlexWrapper>
             <LinkStyle to={`/Character/${props.character.char_id}`} >
                 <CardWrapper>
                     <CardContainer>
@@ -51,7 +56,7 @@ const CharacterCard = (props) => {
                     </CardContainer>
                 </CardWrapper>
             </LinkStyle>
-        </div>
+        </FlexWrapper>
     )
 }
 

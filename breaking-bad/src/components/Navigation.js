@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
+
 const NavigationWrapper = styled.div`
     border: 1px solid red;
     display: flex;
@@ -18,8 +19,8 @@ const LinkStyle = styled(NavLink)`
 const Navigation = () => {
     return (
         <NavigationWrapper>
-            <LinkStyle to={'/Home'}>Home</LinkStyle>
-            <LinkStyle to={'/CharacterList'} >Characters</LinkStyle>
+            <LinkStyle to={`/Home`} >Home</LinkStyle>
+            <LinkStyle to={`/CharacterList`} >Characters</LinkStyle>
         </NavigationWrapper>
     )
 }

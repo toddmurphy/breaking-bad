@@ -4,16 +4,18 @@ import styled from 'styled-components';
 
 
 const NavigationWrapper = styled.div`
-    border: 1px solid red;
     display: flex;
     justify-content: center;
     padding: 2% 0;
+    background: #00aced;
 `
 
 const LinkStyle = styled(NavLink)`
     text-decoration: none;
-    color: black;
+    color: #FFF;
     padding:0 3%;
+    font-size: 1.4rem;
+    font-weight: bold;
 `
 
 const Navigation = () => {

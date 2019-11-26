@@ -14,11 +14,13 @@ const CardWrapper = styled.div`
     margin: auto;
     /* margin: 2% 0; */
     margin-top: 5%;
+    box-shadow: 0px 25px 32px -25px rgba(151,163,184,.5);
     
     &:hover {
         background: salmon;
         color: white;
         border: 2px solid salmon;
+
     }
 `
 

@@ -52,7 +52,9 @@ const CharacterCard = (props) => {
                         <p>Name: {name}</p>
                         <p>Nickname: {nickname}</p>
                         <p>Birthday: {birthday}</p>
-                        <p>Occupation: {occupation}</p>
+                        <div>Occupation: {occupation.map(job => {
+                            return <div>{job}</div>
+                        })}</div>
                         <p>Portrayed by: {portrayed}</p>
                         <p>Status: {status}</p>
                     </CardContainer>

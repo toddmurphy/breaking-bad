@@ -31,6 +31,7 @@ const Character = (props) => {
             <p>Name: {name}</p>
             <p>Birthday: {birthday}</p>
             <p>Nickname: {nickname}</p>
+            {/* <div>Occupation: {occupation}</div> */}
             <div>Occupation: {occupation}</div>
             <p>Portrayed by: {portrayed}</p>
             <p>Status: {status}</p>

@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <Navigation />
-      <Route exact path='/Home' component={Home} />
+      <Route exact path='/' component={Home} />
       <Route exact path='/CharacterList' component={CharacterList} />
       {/* <Route exact path='/Character/:id' component={Character} /> */}
       <Route exact path='/Character/:id' render={props => <Character {...props} />} />
